@@ -20,11 +20,11 @@ export default class Number extends Vue {
   async asyncData({ $content, params, error }: any) {
     const pageNo = parseInt(params.number)
     if (pageNo > 0) {
-      const articles = await $content('posts', params.slug)
+      const articles = await $content('posts')
         .limit(6)
         .skip(5 * (pageNo - 1))
         .fetch()
-      const allArticles = await $content('posts', params.slug).fetch()
+      const allArticles = await $content('posts').fetch()
       const pageLength = allArticles.length
       if (!articles.length) {
         return error({ statusCode: 404, message: 'No posts found!' })

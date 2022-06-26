@@ -47,5 +47,6 @@ export default class Default extends Vue {
   bottom: 0;
   left: 0;
   transition: 0.5s;
+  z-index: 1;
 }
 </style>

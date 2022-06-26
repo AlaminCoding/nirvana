@@ -18,9 +18,9 @@ import PaginationBlock from '~/components/ui/PaginationBlock.vue'
 })
 export default class Home extends Vue {
   pageNo = 1
-  async asyncData({ $content, params }: any) {
-    const articles = await $content('posts', params.slug).limit(6).fetch()
-    const allArticles = await $content('posts', params.slug).fetch()
+  async asyncData({ $content }: any) {
+    const articles = await $content('posts').limit(6).fetch()
+    const allArticles = await $content('posts').fetch()
     const pageLength = allArticles.length
     // Pagination
     const nextPage = articles.length === 6

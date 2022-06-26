@@ -26,8 +26,8 @@
         :key="idx"
         :to="`/page/${idx + 1}`"
         :class="{ active: pageNo === idx + 1 }"
-        >{{ number }}</nuxt-link
-      >
+        >{{ number }}
+      </nuxt-link>
     </nav>
   </section>
 </template>

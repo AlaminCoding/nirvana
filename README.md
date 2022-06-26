@@ -1,5 +1,7 @@
 # nirvana
 
+This is a blog project which is created by [Nuxt-Content](https://content.nuxtjs.org/).
+
 ## Build Setup
 
 ```bash
